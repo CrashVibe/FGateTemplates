@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/*
+ * 渲染环境用 body 的 bounding box 截图（manifest.viewport: "auto"），
+ * body / #root 需 inline-flex 才能按内容尺寸收缩，而非铺满整个视口。
+ */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root {
+  display: inline-flex;
+}
+
+/* 极细颗粒噪点，叠加在卡片背景上模拟纸张纹理 */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}

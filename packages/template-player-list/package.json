@@ -1,0 +1,27 @@
+{
+  "name": "@fgate/template-player-list",
+  "version": "0.1.0",
+  "private": true,
+  "description": "展示在线玩家头像与名称的示例图片模板，根据渲染时间自动切换明暗主题",
+  "author": "MrlingXD",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fgate/template-sdk": "catalog:",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.0"
+  }
+}
