@@ -1,0 +1,35 @@
+{
+  "name": "fgatetemplates",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "catalog": {
+      "@fgate/template-sdk": "^0.1.0"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "typecheck": "bun --filter '*' typecheck",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.69.0",
+    "oxlint-tsgolint": "^0.16.0",
+    "typescript": "^5.9.3",
+    "ultracite": "7.6.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,jsonc,css,scss,md,mdx}": [
+      "oxlint . --fix --quiet",
+      "oxfmt . --write"
+    ]
+  }
+}
